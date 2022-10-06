@@ -109,3 +109,28 @@ resetTheWeatherForecastStatus()
 
 weeklyTemperature = ["first": 1]
 print("\(weeklyTemperature)")
+
+weeklyTemperature = [
+    "Monday": 90,
+    "Tuesday": 60,
+    "Wednesday": 40,
+    "Thursday": 50,
+    "Friday": 70,
+    "Saturday": 80,
+    "Sunday": 110
+]
+print("All the keys \(weeklyTemperature.keys)")
+print("All the values \(weeklyTemperature.values)")
+
+weeklyTemperature = [
+    "Monday": 90,
+    "Tuesday": 60,
+    "Wednesday": 40
+]
+print("All the keys \(weeklyTemperature.keys)")
+print("All the values \(weeklyTemperature.values)")
+
+weeklyTemperature["First"] = 1
+weeklyTemperature.updateValue(2, forKey: "Second")
+print("All the keys \(weeklyTemperature.keys)")
+print("All the values \(weeklyTemperature.values)")

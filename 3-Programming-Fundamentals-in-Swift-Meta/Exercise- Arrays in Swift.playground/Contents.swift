@@ -26,3 +26,7 @@ if levelScores.count == freeLevels {
     print("Game restarted!")
 }
 print(levelScores)
+
+levelScores += [103]
+levelScores.append(6896)
+print(levelScores)
