@@ -27,10 +27,21 @@ func numberOfUnlockedTreasureChests(numberOfUnlocked: Int) -> String {
 
 
 var goldCoins = 0
-func openChestWithCoins(loot: Int) -> Int {
-    loot + 100
+var doubleGoldCoins = 0
+var coinsAmount = 1000
+func openChestWithCoins(loot: Int, coins: Int = coinsAmount) -> Int {
+    loot + coins
 }
-for _ in 1...3 {
+
+func openChestWithDoubleCoins(loot: Int, coins: Int = coinsAmount) -> Int {
+    loot + coins * 2
+}
+
+for _ in 1...5 {
     goldCoins = openChestWithCoins(loot: goldCoins)
+    doubleGoldCoins = openChestWithDoubleCoins(loot: doubleGoldCoins)
 }
-print("You have \(goldCoins) gold coins")
+
+
+print("You have \(goldCoins) gold coins. If You have double bonus, then amount of golden coins is \(doubleGoldCoins)")
+
