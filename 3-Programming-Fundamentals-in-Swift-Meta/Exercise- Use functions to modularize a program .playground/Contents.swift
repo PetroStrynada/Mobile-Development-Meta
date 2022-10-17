@@ -55,3 +55,26 @@ var number = 1
 change(toTwo: &number)
 change(toTwo: &huyamber)
 print(number, huyamber)
+
+
+//find max number
+let maxNumber = {(n1: Int, n2: Int) -> Int in
+    return n1 > n2 ? n1:n2
+}
+print("\(maxNumber(6, 4))")
+print("\(maxNumber(3, 9))")
+let findMaxNumber = {(n1: Int, n2: Int) in n1 > n2 ? n1 : n2}
+print("\(findMaxNumber(4, 7))")
+//find max in array
+let arrayInt = [1, 6, 8, 4, 9, 2]
+print(arrayInt.max()!)
+print(arrayInt.min()!)
+//The same as
+//names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 < s2 })
+//names.sorted(by: { s1, s2 in return s1 < s2 } )
+//names.sorted(by: { s1, s2 in s1 < s2 } )
+//names.sorted(by: { $0 < $1 } )
+//Finally the shortest option
+//names.sorted(by: <)
+print(arrayInt.sorted(by: <))
+print(arrayInt.sorted(by: >))
