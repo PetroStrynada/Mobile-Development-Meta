@@ -23,6 +23,7 @@ gestOne.changeName(newPersonName: "Olga")
 gestOne.printInfo()
 */
 
+
 struct TableReserve {
     var name: String
     let tableNumber: Int
@@ -40,3 +41,16 @@ var gest1 = TableReserve(name: "Petro", tableNumber: 3)
 gest1.printInfo()
 gest1.updateName(newName: "Alex")
 gest1.printInfo()
+
+
+struct User {
+  var iD: Int
+  init(iD: Int) {
+    self.iD = iD
+  }
+}
+
+var user1 = User(iD: 1)
+var user2 = user1
+user1.iD = 2
+print("\(user1.iD) \(user2.iD)")
