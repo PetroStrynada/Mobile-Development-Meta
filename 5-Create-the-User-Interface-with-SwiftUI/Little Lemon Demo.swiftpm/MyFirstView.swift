@@ -9,7 +9,14 @@ import SwiftUI
 
 struct MyFirstView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LazyVStack {
+            Text("Little Lemon")
+            Text("Hi there")
+            Text("Whats are you?")
+            Text("Is it you?")
+        }
+        .padding(.trailing,-200)
+        .padding(.bottom, 250)
     }
 }
 
