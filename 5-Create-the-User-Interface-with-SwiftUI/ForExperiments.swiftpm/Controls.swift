@@ -10,7 +10,7 @@ import SwiftUI
 struct StepperView: View {
     
     //FOR Stepper
-    @State private var value = 0
+    @State private var value = 1
     let step = 1
     let range = 1...50
     
@@ -29,43 +29,54 @@ struct StepperView: View {
     
     var body: some View {
         VStack {
-            Text("Current guests number \(value)")
-            Stepper(value: $value,
-                    in: range,
-                    step: step) {
-                    Text("Number of guests?")
-            }
-            
-            Slider(
-                value: $speed,
-                in: 0...100,
-                step: 1
-            ) {
-                Text("Speed")
-            } minimumValueLabel: {
-                Text("0")
-            } maximumValueLabel: {
-                Text("100")
-            } onEditingChanged: { editing in
-                isEditing = editing
-            }
-            Text("\(speed)")
-                .foregroundColor(isEditing ? .red : .blue)
-            
-            ProgressView(value: progress)
-            HStack (spacing: 50) {
-                Button("More") { progress += 0.05 }.frame(width: 60, height: 30, alignment: .center).background(Color.mint).cornerRadius(6)
-                Button("Less") { progress -= 0.05 }.frame(width: 60, height: 30, alignment: .center).background(Color.mint).cornerRadius(6)
-            }
-            
-            Toggle(isOn: $vibrateOnRing1) {
-                Text("Vibrate on Ring")
-            }
+            VStack {
+                Text("Current guests number \(value)")
+                Stepper(value: $value,
+                        in: range,
+                        step: step) {
+                        Text("Number of guests?")
+                }
+                
+                Slider(
+                    value: $speed,
+                    in: 0...100,
+                    step: 1
+                ) {
+                    Text("Speed")
+                } minimumValueLabel: {
+                    Text("0")
+                } maximumValueLabel: {
+                    Text("100")
+                } onEditingChanged: { editing in
+                    isEditing = editing
+                }
+                Text("\(speed)")
+                    .foregroundColor(isEditing ? .red : .blue)
+                
+                ProgressView(value: progress)
+                HStack (spacing: 50) {
+                    Button("Less") { progress -= 0.05 }.frame(width: 60, height: 30, alignment: .center).background(Color.mint).cornerRadius(6)
+                    Button("More") { progress += 0.05 }.frame(width: 60, height: 30, alignment: .center).background(Color.mint).cornerRadius(6)
+                }
+                
+                Toggle(isOn: $vibrateOnRing1) {
+                    Text("Vibrate on Ring")
+                }
 
-            Toggle("Vibrate on Ring", isOn: $vibrateOnRing2)
+                Toggle("Vibrate on Ring", isOn: $vibrateOnRing2)
+                
+                Toggle("Vibrate on Ring", isOn: $vibrateOnRing).toggleStyle(.button)
+                Toggle("Vibrate on Silent", isOn: $vibrateOnSilent).toggleStyle(.button)
+            }
             
-            Toggle("Vibrate on Ring", isOn: $vibrateOnRing).toggleStyle(.button)
-            Toggle("Vibrate on Silent", isOn: $vibrateOnSilent).toggleStyle(.button)
+            HStack{
+                Image(systemName: "location").imageScale(.small).symbolVariant(.fill).symbolVariant(.slash)
+                Image(systemName: "location.slash.fill").imageScale(.small)
+                Label("Brain", systemImage: "brain.head.profile").imageScale(.large).symbolVariant(.slash)
+                Text("Checkerboard \(Image(systemName: "checkerboard.rectangle"))").imageScale(.large)
+            }
+            
+
         }
             .padding(10)
     }
