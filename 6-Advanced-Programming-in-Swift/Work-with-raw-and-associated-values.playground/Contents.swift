@@ -1,5 +1,8 @@
 import Cocoa
 
+//Enumerations with raw and associated values examples
+//https://www.coursera.org/learn/advanced-programming-in-swift/supplement/dZ4vd/enumerations-with-raw-and-associated-values-examples
+
 //Enums with raw values
 print("Enums with raw values")
 
@@ -101,3 +104,64 @@ func CheckedIfCooked2(for pasta: PastaTypesA) {
 
 CheckedIfCooked2(for: .ravioli(cookingTime: 12))
 CheckedIfCooked2(for: .penne(cookingTime: 8))
+
+
+//Exercise: Work with raw and associated values
+//https://www.coursera.org/learn/advanced-programming-in-swift/supplement/F7Gpt/exercise-work-with-raw-and-associated-values
+
+
+enum Ingredient: String {
+    case chicken = "Add chicken"
+    case lettuce = "Add lettuce"
+    case sauce = "Add sauce"
+    case lemon = "Add lemon"
+    case croutons = "Add croutons"
+}
+
+let ingredient0 = Ingredient.lettuce
+
+switch ingredient0 {
+case .lettuce:
+  print("We use \(ingredient0.rawValue) that has the richest flavor from all the lettuces")
+case .croutons:
+  print("Our \(ingredient0.rawValue) makes sure we do not have to use additional salt in our salads")
+case .chicken: print("Our meals tastes better with \(ingredient0.rawValue) to raise the quality")
+case .sauce:
+    print("We use \(ingredient0.rawValue) that has the richest flavor from all the lettuces.")
+case .lemon:
+    print("We use \(ingredient0.rawValue) that has the richest flavor from all the lettuces.")
+}
+
+
+
+func ingredientDescription(for ingredient: Ingredient) {
+    switch ingredient {
+    case .chicken:
+        print("We use \(ingredient) that has the richest flavor from all the lettuces.")
+    case .lettuce:
+        print("We use \(ingredient) that has the richest flavor from all the lettuces.")
+    case .lemon:
+        print("We use \(ingredient) that has the richest flavor from all the lettuces.")
+    case .sauce:
+        print("We use \(ingredient) that has the richest flavor from all the lettuces.")
+    case .croutons:
+        print("We use \(ingredient) that has the richest flavor from all the lettuces.")
+    }
+}
+
+let ingredient1 = ingredientDescription(for: .chicken)
+print(ingredient1)
+let ingredient2 = ingredientDescription(for: .lettuce)
+print(ingredient2)
+
+
+enum RecipeInformation {
+    case allergens(information: String)
+}
+
+let recipeInformation = RecipeInformation.allergens(information: "peanuts, milk, gluten")
+
+switch recipeInformation {
+case .allergens(let information):
+    print("The meal includes the following allergens: \(information)")
+}
