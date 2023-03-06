@@ -131,3 +131,5 @@ superSpaghetti.prepare()
 
 //Step 10: Calling the plate(artisticLevel :) method
 superSpaghetti.plate(artisticLevel: 10)
+
+//In this exercise, you practiced creating a custom protocol, adding required protocol properties, adding required protocol methods, and implementing the custom protocol with a class.
