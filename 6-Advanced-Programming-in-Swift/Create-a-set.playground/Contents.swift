@@ -5,6 +5,7 @@ import Cocoa
 //https://www.coursera.org/learn/advanced-programming-in-swift/supplement/Y7bZV/store-unique-items-in-sets
 
 //Set declaration
+var mySet: Set<String> = []
 var pastaTypesSet = Set<String>()
 var pastaTypesArray = [String]()
 
@@ -82,3 +83,18 @@ confirmationCodes.remove("LL1111")
 confirmationCodes.remove("LL2222")
 print("All phone numbers \(allPhoneNumbers)")
 print("All confirmation codes \(confirmationCodes)")
+
+//contains
+for number in allPhoneNumbers {
+    if number.contains("000-444-44-44") {
+        print(number)
+    } else {
+        print("no number")
+    }
+}
+
+if allPhoneNumbers.contains("000-555-55-55") {
+    print("000-555-55-55")
+} else {
+    print("no number")
+}
