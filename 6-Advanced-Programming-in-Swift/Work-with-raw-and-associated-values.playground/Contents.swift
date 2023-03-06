@@ -165,3 +165,32 @@ switch recipeInformation {
 case .allergens(let information):
     print("The meal includes the following allergens: \(information)")
 }
+
+
+enum Week: Int, CaseIterable {
+  case Monday = 1
+  case Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+}
+
+//To use allCases property in your code, must an enum conform to CaseIterable protocol
+for day in Week.allCases {
+  print("\(day) is day \(day.rawValue) of the week")
+}
+
+//Prints:
+/*
+ Monday is day 1 of the week
+
+ Tuesday is day 2 of the week
+
+ Wednesday is day 3 of the week
+
+ Thursday is day 4 of the week
+
+ Friday is day 5 of the week
+
+ Saturday is day 6 of the week
+ 
+ Sunday is day 7 of the week
+ */
+
