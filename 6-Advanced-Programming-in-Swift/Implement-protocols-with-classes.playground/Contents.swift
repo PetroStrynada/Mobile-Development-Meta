@@ -106,8 +106,13 @@ protocol Dish {
 //Step 4: Adopt the custom protocol in a class
 class MainDish: Dish {
     //Step 6: Create a memberwise initializer
-    var name: String
+    let name: String
     var preparationMinutes: Int
+    
+    init(name: String, preparationMinutes: Int) {
+        self.name = name
+        self.preparationMinutes = preparationMinutes
+    }
     
     //Step 7: Conform to the protocol methods requirements
     func prepare() {
@@ -116,15 +121,13 @@ class MainDish: Dish {
     func plate(artisticLevel: Int) {
         print("Plate artistic level \(artisticLevel)")
     }
-    
-    init(name: String, preparationMinutes: Int) {
-        self.name = name
-        self.preparationMinutes = preparationMinutes
-    }
 }
 
 //Step 8: Instantiate a MainDish class instance
-let superSpaghetti = MainDish(name: "Super Spaghetti", preparationMinutes: 35)
+let superSpaghetti = MainDish(
+    name: "Super Spaghetti",
+    preparationMinutes: 35
+)
 
 //Step 9: Calling the prepare method
 superSpaghetti.prepare()
@@ -133,3 +136,4 @@ superSpaghetti.prepare()
 superSpaghetti.plate(artisticLevel: 10)
 
 //In this exercise, you practiced creating a custom protocol, adding required protocol properties, adding required protocol methods, and implementing the custom protocol with a class.
+
