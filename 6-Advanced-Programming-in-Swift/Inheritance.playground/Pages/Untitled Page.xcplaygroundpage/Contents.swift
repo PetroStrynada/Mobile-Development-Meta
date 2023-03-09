@@ -92,7 +92,7 @@ class Chef {
 }
 */
 
-class SecretFood {
+open class SecretFood {
     private var ingredients: [String] = ["LOVE, HONEY"]
     fileprivate func readSecretIngredients() {
         print("Secret ingredients")
@@ -123,5 +123,74 @@ let chef2 = Chef2()
 print(chef2.cookSecretFood(secretFood: SecretFood()))
 
 print()
+
+
+//Exercise: Inheritance
+//https://www.coursera.org/learn/advanced-programming-in-swift/supplement/NhlJX/exercise-inheritance
+
+//Step 1: Create a base class
+class Dish {
+    //Step 2: Declare the properties private
+    private let name: String
+    private let ingredients: [String]
+    
+    //Step 3: Create a memberwise initializer
+    init(name: String, ingredients: [String]) {
+        self.name = name
+        self.ingredients = ingredients
+    }
+    
+    //Step 4: Define a method
+    func printInfo() {
+        //Step 5: Update the method body
+        print(name)
+        print(ingredients)
+    }
+}
+
+//Step 6: Subclass the base class
+//Step 9: Declare child classes as final
+final class AppetizerDish: Dish {
+    override func printInfo() {
+        print("Appetizer")
+        super.printInfo()
+    }
+}
+
+//Step 8: Create another child class
+//Step 9: Declare child classes as final
+final class MainDish: Dish {
+}
+
+//Step 10: Create a for-loop
+for _ in 1...5 {
+    let randomNumber = Int.random(in: 0...1)
+    //Step 11: Create a random dish
+    let dish: Dish
+    if randomNumber == 0 {
+        dish = AppetizerDish(name: "Margherita Flatbread",
+                             ingredients: [
+                                "Margherita",
+                                "Flatbread",
+                             ]
+        )
+    } else {
+        dish = MainDish(name: "Super Spaghetti",
+                        ingredients: [
+                            "Spaghetti",
+                            "Tomato sauce",
+                        ]
+        )
+    }
+    //Step 12: Downcast using an if let statement
+    if let appetizerDish = dish as? AppetizerDish {
+        dish.printInfo()
+    }
+    
+    //Step 13: Type check
+    if dish is MainDish {
+        dish.printInfo()
+    }
+}
 
 
