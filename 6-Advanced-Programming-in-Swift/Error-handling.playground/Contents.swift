@@ -28,7 +28,7 @@ class Calculator {
 }
 
 //Step 3: Initialize the class to a constant
-var calculator = Calculator()
+let calculator = Calculator()
 //Step 4: Call the function to divide two numbers
 //let successfulResult: Double = try calculator.divide(10, by: 0)
 //print(successfulResult)
@@ -43,3 +43,47 @@ do {
 catch CalculatorError.divisionByZero {
     print("Division by zero detected and not allowed")
 }
+
+//My example
+enum Domain: Error {
+    case by
+    case ru
+}
+
+class Site {
+    let dot = "."
+    
+    
+    func getFullSiteName(_ siteName: String, domain: String) throws -> () {
+        if domain == "by" {
+            throw Domain.by
+        } else if domain == "ru" {
+            throw Domain.ru
+        }
+        
+        var siteFullName: String
+        siteFullName = siteName + dot + domain
+        return print(siteFullName)
+        
+    }
+}
+
+var site = Site()
+
+//throws only first error
+do {
+    print("case .ua")
+    try site.getFullSiteName("ukrainian", domain: "ua")
+    print("case .com")
+    try site.getFullSiteName("ukrainian", domain: "com")
+    print("case .ru")
+    try site.getFullSiteName("ukrainian", domain: "ru")
+    print("case .by")
+    try site.getFullSiteName("ukrainian", domain: "by")
+    
+} catch Domain.by {
+    print("fuck you lukashesko")
+} catch Domain.ru {
+    print("fuck you putin")
+}
+
