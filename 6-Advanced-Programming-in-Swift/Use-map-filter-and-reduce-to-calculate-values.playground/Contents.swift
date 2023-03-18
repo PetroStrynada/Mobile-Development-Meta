@@ -199,3 +199,28 @@ let result = totalRevenueOf(orders: orders, location: "New York")
 //Step 6: Confirm that function implementation works as expected
 print(result)
 
+print()
+
+
+//ForEach
+//https://github.com/PetroStrynada/Mobile-Development-Meta
+
+//forEach is a dedicated method that loops over each element in an array or dictionary and does something with it.
+
+//What is the forEach function
+//array.forEach { element in
+//    // Do something with an element
+//}
+
+//Why use forEach over the for or while loop?
+let donationsInformation1  = ["John" : 56, "Tom": 15, "Charlie": 104]
+let donationsTexts1 = donationsInformation1.map { "\($0.key) has donated \($0.value) so far"}
+for text in donationsTexts1 {
+    print(text)
+}
+
+print()
+
+let donationsInformation2 = ["John": 56, "Tom": 15, "Charlie": 104]
+donationsInformation2.map { "\($0.key) has donated \($0.value) so far" }
+    .forEach { print($0) }
