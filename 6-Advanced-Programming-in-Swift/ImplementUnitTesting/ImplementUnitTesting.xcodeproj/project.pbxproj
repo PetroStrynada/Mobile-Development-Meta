@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB043B6E29CA30E0007890CD /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043B6D29CA30E0007890CD /* Checkout.swift */; };
 		FB40FA4A29C89726005F75A6 /* ImplementUnitTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB40FA4929C89726005F75A6 /* ImplementUnitTestingApp.swift */; };
 		FB40FA4C29C89726005F75A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB40FA4B29C89726005F75A6 /* ContentView.swift */; };
 		FB40FA4E29C89728005F75A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB40FA4D29C89728005F75A6 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB043B6D29CA30E0007890CD /* Checkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
 		FB40FA4629C89726005F75A6 /* ImplementUnitTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImplementUnitTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB40FA4929C89726005F75A6 /* ImplementUnitTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplementUnitTestingApp.swift; sourceTree = "<group>"; };
 		FB40FA4B29C89726005F75A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				FB40FA5729C89745005F75A6 /* UsingFakes.swift */,
 				FBBD0CED29C9DF830004A5C3 /* UsingMocks.swift */,
+				FB043B6D29CA30E0007890CD /* Checkout.swift */,
 				FB40FA4929C89726005F75A6 /* ImplementUnitTestingApp.swift */,
 				FB40FA4B29C89726005F75A6 /* ContentView.swift */,
 				FB40FA4D29C89728005F75A6 /* Assets.xcassets */,
@@ -205,6 +208,7 @@
 			files = (
 				FB40FA4C29C89726005F75A6 /* ContentView.swift in Sources */,
 				FB40FA5829C89745005F75A6 /* UsingFakes.swift in Sources */,
+				FB043B6E29CA30E0007890CD /* Checkout.swift in Sources */,
 				FBBD0CEE29C9DF830004A5C3 /* UsingMocks.swift in Sources */,
 				FB40FA4A29C89726005F75A6 /* ImplementUnitTestingApp.swift in Sources */,
 			);
