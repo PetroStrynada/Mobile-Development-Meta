@@ -3,8 +3,7 @@
 //  ImplementUnitTesting
 //
 //  Created by Petro Strynada on 20.03.2023.
-//
-//https://www.coursera.org/learn/advanced-programming-in-swift/supplement/R1yrb/using-fakes
+//  https://www.coursera.org/learn/advanced-programming-in-swift/supplement/R1yrb/using-fakes
 
 
 import Foundation

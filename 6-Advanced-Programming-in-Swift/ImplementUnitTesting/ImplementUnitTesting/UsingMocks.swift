@@ -4,6 +4,8 @@
 //
 //  Created by Petro Strynada on 21.03.2023.
 //
+//  Using mocks
+//  https://www.coursera.org/learn/advanced-programming-in-swift/supplement/8St87/using-mocks
 
 import Foundation
 
